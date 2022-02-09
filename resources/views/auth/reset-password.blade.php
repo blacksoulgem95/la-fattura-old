@@ -6,16 +6,21 @@
                     <div class="uk-width-1-1@m">
                         <div
                             class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
-                            <h3 class="uk-card-title uk-text-center">La Fattura<small><br/>Administrator Login</small></h3>
-                            <form method="POST" action="{{ route('login') }}">
-                                @csrf
-                                <!-- Validation Errors -->
-                                    <x-auth-validation-errors class="mb-4" :errors="$errors"/>
+                            <h3 class="uk-card-title uk-text-center">La
+                                Fattura<small><br/>{{__('auth.title.securedArea')}}</small></h3>
+                            <!-- Validation Errors -->
+                            <form method="POST" action="{{ route('password.update') }}">
+                            @csrf
+
+                            <!-- Password Reset Token -->
+                                <x-auth-validation-errors class="mb-4" :errors="$errors"/>
+                                <input type="hidden" name="token" value="{{ $request->route('token') }}">
                                 <div class="uk-margin">
                                     <div class="uk-inline uk-width-1-1">
-                                        <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                        <input name="email" placeholder="{{__('auth.title.email')}}"
-                                               class="uk-input uk-form-large" required autofocus type="text">
+                                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                        <input name="password" placeholder="{{__('auth.title.password')}}"
+                                               class="uk-input uk-form-large" value="{{old('email', $request->email)}}"
+                                               required autocomplete="current-password" type="password">
                                     </div>
                                 </div>
                                 <div class="uk-margin">
@@ -28,23 +33,17 @@
                                 </div>
                                 <div class="uk-margin">
                                     <div class="uk-inline uk-width-1-1">
-                                        <label>
-                                            <input id="remember_me" type="checkbox"
-                                                   class="uk-checkbox" name="remember"> {{__('auth.title.remember')}}
-                                        </label>
+                                        <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                                        <input name="password_confirmation" placeholder="{{__('auth.title.passwordRepeat')}}"
+                                               class="uk-input uk-form-large"
+                                               required autocomplete="current-password" type="password">
                                     </div>
                                 </div>
                                 <div class="uk-margin">
                                     <button type="submit"
                                             class="uk-button uk-button-primary uk-button-large uk-width-1-1">
-                                        {{__('auth.cta.login')}}
+                                        {{__('auth.cta.send')}}
                                     </button>
-                                </div>
-                                <div class="uk-margin">
-                                    <p class="uk-text-center">
-                                        <a class="uk-button uk-button-large uk-width-1-1"
-                                           href="{{route('password.request')}}">{{__('auth.title.recovery')}}</a>
-                                    </p>
                                 </div>
                             </form>
                         </div>

@@ -7,7 +7,11 @@
                         <div
                             class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
                             <h3 class="uk-card-title uk-text-center">La Fattura</h3>
-                            <p class="uk-text-center"><a href="#">Enter Customer Area</a></p>
+                            <div class="uk-margin">
+                                <p class="uk-text-center">
+                                    <a  class="uk-button uk-button-large uk-width-1-1" href="{{route('customer.login')}}">{{__('auth.cta.customerAreaLogin')}}</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>

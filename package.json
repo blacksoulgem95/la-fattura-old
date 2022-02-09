@@ -10,9 +10,16 @@
         "production": "mix --production"
     },
     "devDependencies": {
+        "autoprefixer": "^10.1.0",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "postcss": "^8.2.1",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.49.7",
+        "sass-loader": "^12.4.0"
+    },
+    "dependencies": {
+        "uikit": "^3.11.1"
     }
 }

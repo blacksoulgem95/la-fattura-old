@@ -1,14 +1,9 @@
 <html>
 <head>
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/css/uikit.min.css" />
-
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.11.1/dist/js/uikit-icons.min.js"></script>
-
+    <link rel="stylesheet" href="{{mix('css/app.css')}}"/>
+    <script src={{mix('js/app.js')}}></script>
 </head>
-<body>
+<body class="bg">
 <x-navbar></x-navbar>
 {{ $slot }}
 </body>
