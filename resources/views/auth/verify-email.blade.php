@@ -5,7 +5,7 @@
                 <div class="uk-grid-margin uk-grid uk-grid-stack" uk-grid>
                     <div class="uk-width-1-1@m">
                         <div
-                            class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
+                            class="uk-margin uk-width-large uk-margin-auto uk-card uk-card-secondary uk-light uk-card-body uk-box-shadow-large">
                             <h3 class="uk-card-title uk-text-center">La
                                 Fattura<small><br/>{{__('auth.messages.verify.title')}}</small></h3>
                             <form method="POST" action="{{ route('verification.send') }}">
