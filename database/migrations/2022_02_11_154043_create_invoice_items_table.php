@@ -21,6 +21,9 @@ class CreateInvoiceItemsTable extends Migration
             $table->unsignedBigInteger('item_id');
 
             $table->timestamps();
+
+            $table->foreign('invoice_id')->references('id')->on('invoices');
+            $table->foreign('item_id')->references('id')->on('items');
         });
     }
 
