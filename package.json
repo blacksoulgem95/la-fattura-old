@@ -20,6 +20,7 @@
         "sass-loader": "^12.4.0"
     },
     "dependencies": {
+        "chart.js": "^3.7.1",
         "uikit": "^3.11.1"
     }
 }

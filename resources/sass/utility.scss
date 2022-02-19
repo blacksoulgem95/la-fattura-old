@@ -1,0 +1,43 @@
+.lf-big {
+    font-size: 1.3rem;
+}
+
+@mixin transition($args) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin calc($property, $expression) {
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+@mixin clearfix {
+    &:before,
+&:after {
+         content: "";
+         display: table;
+     }
+    &:after {
+             clear: both;
+         }
+}
+
+@mixin animation ($delay, $duration, $animation) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards;
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards;
+}

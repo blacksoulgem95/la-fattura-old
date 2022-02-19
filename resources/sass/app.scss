@@ -5,6 +5,8 @@
 @import "~uikit/src/scss/mixins-theme";
 @import "~uikit/src/scss/components/_import";
 @import "~uikit/src/scss/theme/_import";
+@import "utility";
+@import "flexbox";
 
 // customization
 
@@ -16,4 +18,3 @@
 // last load
 @import "~uikit/src/scss/uikit";
 @import "~uikit/src/scss/uikit-theme";
-
